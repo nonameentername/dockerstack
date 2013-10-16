@@ -29,6 +29,6 @@ RUN apt-get install -y postgresql-client
 
 EXPOSE 5000 35357
 
-ADD scripts/keystone-run.sh keystone-run.sh
+ADD files/run.sh run.sh
 
-CMD /keystone-run.sh
+CMD /run.sh

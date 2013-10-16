@@ -1,6 +1,8 @@
 #!/bin/bash
 
-echo $DB_HOST
+if [ -n "$REVISION" ]; then
+    (cd /keystone && git pull && git checkout $REVISION)
+fi
 
 sed -i "/\[sql\]/aconnection = postgresql://keystone:password@$DB_HOST:5432/keystone?client_encoding=utf8" /keystone/etc/keystone.conf.sample
 

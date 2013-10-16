@@ -2,8 +2,6 @@
 
 ROOTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-cd $ROOTDIR/postgres
-docker build -t keystone-postgres .
-
-cd $ROOTDIR
-docker build -t keystone .
+docker build -t keystone-openldap $ROOTDIR/openldap
+docker build -t keystone-postgres $ROOTDIR/postgres
+docker build -t keystone $ROOTDIR
