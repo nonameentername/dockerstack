@@ -5,9 +5,6 @@
 FROM ubuntu:12.04
 MAINTAINER Werner R. Mendizabal "werner.mendizabal@gmail.com"
 
-RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
-RUN apt-get update
-
 RUN apt-get install -y git-core
 RUN apt-get install -y python-dev libxml2-dev libxslt1-dev libsasl2-dev libsqlite3-dev libssl-dev libldap2-dev
 
