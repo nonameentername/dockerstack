@@ -2,7 +2,7 @@
 #
 # VERSION               1.0
 
-FROM ubuntu:latest
+FROM ubuntu:12.04
 MAINTAINER Werner R. Mendizabal "werner.mendizabal@gmail.com"
 
 RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
